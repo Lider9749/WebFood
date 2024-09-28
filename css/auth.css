@@ -1,0 +1,135 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  display: flex; /* Добавляем flexbox к body */
+  flex-direction: column; /* Выравниваем элементы по вертикали */
+  min-height: 100vh; /* Задаем минимальную высоту body на высоту экрана */
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6b6b;
+}
+
+.nav .active {
+  color: #ff6b6b;
+}
+
+.login {
+  margin-left: 10px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login:hover {
+  color: #ff6b6b;
+}
+
+.auth-section {
+  width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  /* Добавлена максимальная ширина для предотвращения захода за экран */
+  max-width: 100%; 
+}
+
+.auth-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.auth-section label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.auth-section input[type="text"],
+.auth-section input[type="password"],
+.auth-section input[type="checkbox"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.auth-section button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-section button[type="submit"]:hover {
+  background-color: #ff0000;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto; /* Добавляем автоматический верхний отступ */
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    margin: 10px 0;
+  }
+
+  .auth-section {
+    width: 90%;
+    margin: 20px auto;
+  }
+}

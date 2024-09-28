@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Food Construct - Авторизация</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Food Construct</h1>
+            <div class="nav">
+                <a href="index.html">О нас</a>
+                <a href="lunch.html">Собрать ланч</a>
+                <a href="orders.html">Заказы</a>
+                <a href="contacts.html">Контакты</a>
+                <a class="login" href="auth.html" class="active">Войти</a>
+            </div>
+        </div>
+
+        <main>
+            <section class="auth-section">
+                <h2>Авторизация</h2>
+                <form action="https://httpbin.org/post" method="post">
+                    <label for="login">Логин:</label>
+                    <input type="text" id="login" name="login"><br><br>
+                    <label for="password">Пароль:</label>
+                    <input type="password" id="password" name="password"><br><br>
+                    <input type="checkbox" id="remember" name="remember">
+                    <label for="remember">Запомнить меня</label><br><br>
+                    <button type="submit">Войти</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <p>Позвонить нам: +7-000-000-00-00</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Food Construct - Контакты</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contacts.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Food Construct</h1>
+            <div class="nav">
+                <a href="index.html">О нас</a>
+                <a href="lunch.html">Собрать ланч</a>
+                <a href="orders.html">Заказы</a>
+                <a href="contacts.html" class="active">Контакты</a>
+                <a class="login" href="auth.html">Войти</a>
+            </div>
+        </div>
+
+        <main>
+            <section class="contact-info">
+                <h2>Наши контакты</h2>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+7-000-000-00-00</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@example.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>г. Москва, ул. Ленина, д. 100</p>
+                </div>
+            </section>
+
+            <section class="map">
+                <h2>Как нас найти</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.2078095957337!2d37.61769706664838!3d55.75581767836447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54b3a2026d1ad%3A0x3d9a9c206a6701b8!2z0JHQvtC10L3RgtC10L3QvdC4LCDQodC40Lkg0YPRgNC40L3QvdC40Y8!5e0!3m2!1sru!2sru!4v1678188486130!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="form">
+                <h2>Оставьте нам сообщение</h2>
+                <form action="https://httpbin.org/post" method="post">
+                    <input type="text" placeholder="Ваше имя" name="name" required>
+                    <input type="email" placeholder="Ваш e-mail" name="email" required>
+                    <textarea placeholder="Ваше сообщение" name="message" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer id="footer">
+        <div class="container">
+            <p>Позвонить нам: +7-000-000-00-00</p>
+        </div>
+    </footer>
+</body>
+</html>

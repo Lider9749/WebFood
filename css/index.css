@@ -1,0 +1,191 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+  display: flex; /* Добавляем flexbox к body */
+  flex-direction: column; /* Выравниваем элементы по вертикали */
+  min-height: 100vh; /* Задаем минимальную высоту body на высоту экрана */
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6b6b;
+}
+
+.nav .active {
+  color: #ff6b6b;
+}
+
+.login {
+  margin-left: 10px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login:hover {
+  color: #ff6b6b;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 70%;
+  height: auto;
+}
+
+.banner-text {
+  padding: 26px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  flex: 1;
+}
+
+.banner-text h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.banner-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.banner-button {
+  padding: 12px 24px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.banner-button:hover {
+  background-color: #ff0000;
+}
+
+.popular-dishes {
+  margin-bottom: 30px;
+}
+
+.popular-dishes h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popular-dishes table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.popular-dishes th,
+.popular-dishes td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.popular-dishes th {
+  background-color: #f2f2f2;
+  font-weight: 700;
+}
+
+.popular-dishes tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.popular-dishes tr:hover {
+  background-color: #f1f1f1;
+}
+
+.popular-dishes td:first-child {
+  font-weight: 700;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    margin: 10px 0;
+  }
+
+  .banner {
+    flex-direction: column;
+  }
+
+  .banner-img {
+    width: 100%;
+  }
+
+  .banner-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .popular-dishes table {
+    font-size: 14px;
+  }
+}
+
+/* Добавляем стили, чтобы footer был внизу страницы */
+footer {
+  margin-top: auto; /* Добавляем автоматический верхний отступ */
+}

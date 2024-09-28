@@ -1,0 +1,171 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f8f8;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #ff6b6b;
+}
+
+.nav .active {
+  color: #ff6b6b;
+}
+
+.login {
+  margin-left: 10px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login:hover {
+  color: #ff6b6b;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.info-item i {
+  font-size: 24px;
+  color: #ff6b6b;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.info-item i:hover {
+  color: #ff0000;
+}
+
+.info-item p {
+  font-size: 16px;
+}
+
+.map {
+  margin-bottom: 30px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.map iframe {
+  width: 90%; /* Устанавливаем ширину iframe на 100% */
+  height: 300px;
+  margin: 0 auto; /* Центрируем iframe */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form input,
+.form textarea {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box; /* Учитываем отступы при расчете ширины */
+  text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #ff0000;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Медиа-запросы */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    margin: 10px 0;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-item {
+    width: 90%;
+    margin-bottom: 15px;
+  }
+
+  /* Центрируем поля формы на мобильных устройствах */
+  .form input,
+  .form textarea {
+    width: 90%;
+    box-sizing: border-box; /* Учитываем отступы при расчете ширины */
+    margin-left: 5%; /* Добавляем отступ 5% слева */
+  }
+}
