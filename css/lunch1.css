@@ -36,22 +36,18 @@ body {
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
 .order-data .delivery-time-options {
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-top: 10px; /* Добавлено для лучшего выравнивания */
 }
 
-.order-data label, 
-.order-data input[type="radio"] {
-  display: flex; /* Изменено на flex для выравнивания с radio */
-  align-items: center; /* Центрируем элементы по вертикали */
-  margin: 0; /* Убрано для уменьшения отступов */
+.order-data label, .order-data input[type="radio"] {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
   padding: 0;
 }
-
 .nav a:hover {
   color: #ff6b6b;
 }
@@ -153,7 +149,7 @@ footer {
 .order-content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between ;
 }
 
 .order-items {
@@ -170,14 +166,11 @@ footer {
   margin-left: -25%;
   transform: translateX(-25%);
 }
-
 .order-data label {
   display: block;
   margin-bottom: 10px;
 }
-
-.order-data input, 
-.order-data textarea {
+.order-data input, .order-data textarea {
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
@@ -185,8 +178,8 @@ footer {
   border-radius: 5px;
 }
 
-#reset-button, 
-#submit-button {
+
+#reset-button, #submit-button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -203,8 +196,7 @@ footer {
   color: #fff;
 }
 
-#reset-button:hover, 
-#submit-button:hover {
+#reset-button:hover, #submit-button:hover {
   opacity: 0.8;
 }
 

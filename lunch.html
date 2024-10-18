@@ -108,9 +108,9 @@
                             <img alt="Яблочный сок" height="200" src="pic/drinks/applejuice.jpg" width="300"/>
                             <div class="card-content">
                                 <p class="price">120Р</p>
-                                <p>Апельсиновый сок</p>
+                                <p>Яблочный сок</p>
                                 <p class="weight">300 мл</p>
-                                <button class="add-button" data-name="Апельсиновый сок" data-price="120">Добавить</button>
+                                <button class="add-button" data-name="Яблочный сок" data-price="120">Добавить</button>
                             </div>
                         </div>
                     </div>
@@ -186,6 +186,9 @@
         });
 
         function renderOrder() {
+            // Сортировка по алфавиту
+            order.sort((a, b) => a.name.localeCompare(b.name));
+
             orderList.innerHTML = '';
             order.forEach(item => {
                 const li = document.createElement('li');
@@ -197,6 +200,8 @@
 
         const deliveryTimeRadio = document.getElementById('delivery-time-asap');
         const deliveryTimeInput = document.getElementById('delivery-time-input');
+        const submitButton = document.getElementById('submit-button');
+        const deliveryTimeSpecifiedRadio = document.getElementById('delivery-time-specified');
 
         deliveryTimeRadio.addEventListener('change', () => {
             if (deliveryTimeRadio.checked) {
@@ -206,13 +211,26 @@
             }
         });
 
-        const deliveryTimeSpecifiedRadio = document.getElementById('delivery-time-specified');
-
         deliveryTimeSpecifiedRadio.addEventListener('change', () => {
-            if (deliveryTimeSpecifiedRadio.checked) {
-                deliveryTimeInput.disabled = false;
+            if (deliveryTimeSpecifiedRadio.checked && !deliveryTimeInput.value) {
+                submitButton.disabled = true;
             } else {
-                deliveryTimeInput.disabled = true;
+                submitButton.disabled = false;
+            }
+        });
+
+        deliveryTimeInput.addEventListener('input', () => {
+            if (deliveryTimeSpecifiedRadio.checked && deliveryTimeInput.value) {
+                submitButton.disabled = false;
+            } else if (deliveryTimeSpecifiedRadio.checked) {
+                submitButton.disabled = true;
+            }
+        });
+
+        document.getElementById('order-form').addEventListener('submit', (e) => {
+            if (deliveryTimeSpecifiedRadio.checked && !deliveryTimeInput.value) {
+                e.preventDefault();
+                alert("Пожалуйста, выберите время доставки!");
             }
         });
     </script>
